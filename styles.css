@@ -1,0 +1,238 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+
+body div {
+    margin: auto;
+}
+body div div  div{
+    display: flex;
+    margin:  auto;
+    justify-content:space-between;
+   
+}
+body div div div  div {
+    display: table-row-group;  
+}
+header {
+    background-color: #21283e;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    height: 80px;
+    
+}
+
+nav {
+    color: #fff;
+}
+
+
+nav ul { 
+    display: inline;    
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 5px 15px;
+    font-size: 10px;
+}
+nav ul li:hover {
+    color: #72a2b9;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;    
+    display: block;
+    font-size: 20px;
+    word-wrap: break-word; /* Ensures long words break to the next line */
+    overflow-wrap: break-word; /* Ensures long words break to the next line */
+}
+nav ul li:hover ul {
+    display: block;
+}
+p { 
+    font-size: 20px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center; 
+}
+img { 
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+}
+footer {
+    background-color: #21283e;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+   margin-top: auto;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    padding: 3px 50px;
+    font-size: 20px;
+}
+
+footer div:hover {
+    color: #286479;
+}
+ 
+
+a {
+    color: #649eb3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #8bb3c2;
+}
+.zagolovok {
+    padding-left: 10px;
+   font-family: 'Courier New', Courier, monospace;
+}
+.pidzagolovok {
+    font-family: 'Courier New', Courier, monospace;
+}
+iframe {
+    padding-left: 10px;
+    padding: 20px;
+}
+.pidzagolovoktelefona {
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 10px;
+}
+.pidzagolovoktelefona:hover {
+    text-decoration: none;
+    color: #9bc1cf;
+}
+.samsung {
+    padding-right: 70%;
+    text-align: center;
+    
+}
+.samsung:hover {
+    text-decoration: none;
+    color: #9bc1cf;
+}
+.fotografia {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px;
+    
+}
+.textpidfotografieu {
+    display: flex;
+    background-color: rgba(196, 210, 210, 0.41);
+    width: 1000px; 
+    justify-content: center;
+    
+    width: fit-content;
+    height: fit-content;
+}
+.textopys {
+    padding: 20px;
+    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+     
+        
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* ...existing code... */
+.text-align-justify {
+    text-align: justify;
+}
+
+.centered-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.alternate-bg p:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+.two-columns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+.slovoopys {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.description-section {
+    margin-bottom: 20px;
+}
+
+.description-section h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.description-section p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+}
+.micatalog {
+    font-size: larger;
+    height: 50px;
+    color: #174660;
+    background-color: #8bbfd1f6;
+    width: 300px;  
+}
+.micatalog:active {
+    text-decoration: none;
+    color: #89a3b0;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;   
+    
+}
+.rotate {
+    transform: rotate(90deg);  
+}

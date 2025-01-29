@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>MySite</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .search-bar {
+                text-align: center;
+                display: flex;
+                justify-content: center;
+            }
+            .search-bar input {
+                width: 300px;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+            .search-bar button {
+                padding: 5px 10px;
+                border: none;
+                background-color: #4b7baf;
+                color: #592b2b;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .search-bar button:hover {
+                background-color: #0056b3;
+            }
+            .lupabezfona {
+                width: 30px;
+                height: 30px;
+            }
+            .nav-item {
+                display: flex;
+                align-items: center;
+            }
+            .nav-item img {
+                margin-right: 5px;
+            }
+            .slider {
+                position: relative;
+                max-width: 500px;
+                margin: 20px auto;
+                overflow: hidden;
+                border-radius: 10px;
+                max-height: 250px; /* Adjust height to fit the images */
+                border: 15px solid rgba(229, 219, 219, 1); /* Add transparent border to the slider*/
+                box-shadow: 0 0 10px rgba(138, 104, 104, 0.5); 
+            }
+            .slides {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                height: 100%;
+                
+            }
+            .slide {
+                min-width: 100%;
+                box-sizing: border-box;
+                height: 100%;
+                
+            }
+            .slide img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain; /* Maintain aspect ratio */
+                display: block;
+                transition: transform 0.3s ease; /* Add transition for smooth movement */
+                
+            }
+            .slide img:hover {
+                transform: scale(1.05); /* Slightly enlarge the image on hover */
+            }
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 50%;
+            }
+            .prev {
+                left: 15px; /* Move closer to the center */
+            }
+            .next {
+                right: 15px; /* Move closer to the center */
+            }
+            .Catalog {
+                display: flex;
+                justify-content: space-between;
+                max-width: 1500px;
+               
+            }
+            .Catalog div {
+                position: relative;   
+                background-color: #fff;
+                width: 300px;
+                
+                border-radius: 10px;
+                text-align: center;
+                transition: transform 0.3s;
+                padding: 0 5px;
+            }
+            .Catalog div img {
+                transition: transform 0.3s ease; /* Add transition for smooth movement */
+                width: 100%;
+                border-radius: 10px;
+            }
+            .Catalog div img:hover  {
+                transform: scale(1.05); /* Slightly enlarge the image on hover */
+            }
+            .Catalog div .overlay-text {
+                position: absolute;   
+                color: white;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 10px;
+                font-size: 1.5em;    
+                transition: opacity 0.3s ease;
+            }
+            
+        </style>
+    </head>
+    <body>
+    <div class = 'wrapper'>
+        <header>
+            <div class="container">
+            <button class = micatalog><div><p>каталог товарів</p> <p class = rotate>|||</p></div></button>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Пошук">
+                <button onclick="searchProducts()"><img class = lupabezfona src="лупабезфона.png"></button>
+            </div>
+            <nav>
+                <ul>
+                    <li class="nav-item"><img class = lupabezfona src="кошикбезфона.png"><a href="http://127.0.0.1:5500/Untitledfour.html">кошик</a></li>
+                </ul>   
+            </nav>
+            </div>
+        </header>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="xiaomi.webp" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="xiaomiтретій.webp" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="468886071.webp" alt="Slide 3">
+                </div>
+                <div class="slide">
+                    <img src="456211190.webp" alt="Slide 4">
+                </div>
+                <div class="slide">
+                    <img src="365137070.webp" alt="Slide 5">
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        <div class = Catalog>
+         <div>
+            <img src="фонтелефона.jpg">
+            <p class="overlay-text">Телефони</p>
+        </div>
+        <div>
+            <img src="фонкомп'ютера.jpg">
+            <p class="overlay-text">Комп'ютери</p>
+        </div>
+        <div>
+            <img src="фоннавушників.jpg">
+            <p class="overlay-text">Навушники</p>
+        </div>
+        <div>
+            <img src="фонклавіатури.jpg">
+            <p class="overlay-text">Клавіатури</p>
+        </div>
+        <div>
+            <img src="фонзарядних станцій.jpg">
+            <p class="overlay-text">Зарядні станції</p>
+        </div>
+        </div>
+
+        <footer>
+            <div>
+                <p>&copy; 2025 MySite. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function searchProducts() {
+            const input = document.getElementById('search-input').value.toLowerCase();
+            const products = document.querySelectorAll('.pidzagolovoktelefona');
+            products.forEach(product => {
+                const text = product.textContent.toLowerCase();
+                if (text.includes(input)) {
+                    product.parentElement.style.display = 'block';
+                } else {
+                    product.parentElement.style.display = 'none';
+                }
+            });
+        }
+        let currentSlide = 0;
+
+        function moveSlide(direction) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function autoSlide() {
+            moveSlide(1);
+            setTimeout(autoSlide, 3000); // Change slide every 3 seconds
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            setTimeout(autoSlide, 3000); // Start the auto slide after 3 seconds
+        });
+    </script>
+    </body>
+</html>
